@@ -1,56 +1,66 @@
-Header
-
 <?php
+/*
+Template Name: Blog
+Template Post Type: page
 
-/**
- * The header for our theme
+* Custom template for displaying the Blog page.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package quillerina-theme
- */
+*/
 
+get_header();
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
+<main id="primary" class="site-main">
 
-<head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
-</head>
+	<section class="section-blog">
+		<?php
+		$args = array(
+			'post_type' => 'blog', // Replace 'your_cpt_slug' with the actual slug of your custom post type
+			'posts_per_page' => -1,
+		);
+		$query = new WP_Query($args);
 
-<body <?php body_class(); ?>>
-	<?php wp_body_open(); ?>
-	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'quillerina-theme'); ?></a>
+		if ($query->have_posts()) {
+			while ($query->have_posts()) {
+				$query->the_post();
 
-		<header id="masthead" class="site-header">
-			<div class="site-branding">
-				<!-- <div class="site-icon">
-                    <img src="<?php echo get_template_directory_uri() . '/icons/light-logo.svg'; ?>" alt="Quillerina Paper Art Icon">
-                </div> -->
+				$blog_image = get_field('blog_image');
+				if ($blog_image) {
+					$image_url = $blog_image['url'];
+					$image_alt = $blog_image['alt'];
+					echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($image_alt) . '">';
+				}
 
-				<h1 class="site-title"><a href="<?php echo esc_url(home_url('/landing-page')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 
-				<?php if (get_bloginfo('description') || is_customize_preview()) : ?>
-					<p class="site-description"><?php echo get_bloginfo('description', 'display'); ?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+				$blog_title = get_field('blog_tilte');
+				if ($blog_title) {
+					echo '<h2 class="blog_title">' . $blog_title . '</h2>';
+				}
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'quillerina-theme'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+				$blog_text = get_field('blog_text');
+				if ($blog_text) {
+					echo '<p class="blog_text">' . $blog_text . '</p>';
+				}
+
+				$blog_link = get_field('blog_link');
+				if ($blog_link) {
+					$blog_link_url = $blog_link['url'];
+					$blog_link_title = $blog_link['title'];
+					echo '<a class="hero-cta" href="' . $blog_link_url . '">' . $blog_link_title . '</a>';
+				}
+			}
+
+			wp_reset_postdata(); // Reset the post data
+		}
+		?>
+	</section>
+
+
+
+</main><!-- #main -->
+
+<?php
+get_footer();
