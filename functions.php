@@ -53,6 +53,7 @@ function quillerina_theme_setup()
 		array(
 			'main-menu' => esc_html__('Primary', 'quillerina-theme'),
 			'footer-menu' => esc_html__('Footer Menu', 'quillerina-theme'),
+			'header-secondary-menu' => esc_html__('Header Secondary Menu', 'quillerina-theme'),
 		)
 	);
 
@@ -155,6 +156,7 @@ function quillerina_theme_scripts()
 }
 add_action('wp_enqueue_scripts', 'quillerina_theme_scripts');
 
+//Enqueue Custom Fonts
 function enqueue_custom_fonts()
 {
 
@@ -183,6 +185,17 @@ function enqueue_custom_fonts()
 	);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
+
+
+
+//Add normalize.css
+function add_normalize_CSS()
+{
+	wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css');
+}
+add_action('wp_enqueue_scripts', 'add_normalize_CSS');
+
+
 
 
 /**

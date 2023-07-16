@@ -51,6 +51,7 @@
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'quillerina-theme'); ?></button>
 				<?php
+				// Display the primary menu
 				wp_nav_menu(
 					array(
 						'theme_location' => 'main-menu',
@@ -58,5 +59,17 @@
 					)
 				);
 				?>
-			</nav><!-- #site-navigation -->
+			</nav><!-- #primary-navigation -->
+
+			<nav id="secondary-navigation" class="secondary-navigation">
+				<!-- Header Secondary Menu -->
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header-secondary-menu',
+						'menu_id'        => 'header-secondary-menu',
+					)
+				);
+				?>
+			</nav><!-- #secondary-navigation -->
 		</header><!-- #masthead -->
