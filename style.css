@@ -721,6 +721,23 @@ textarea {
   display: block;
 }
 
+.menu-toggle {
+  border: none;
+  background-color: var(--global--body-background);
+}
+
+.menu-toggle .menu-close-icon {
+  display: none;
+}
+
+.menu-toggle[aria-expanded='true'] .menu-open-icon {
+  display: none;
+}
+
+.menu-toggle[aria-expanded='true'] .menu-close-icon {
+  display: inline-block;
+}
+
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
