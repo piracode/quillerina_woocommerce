@@ -71,6 +71,21 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Variables */
+:root {
+  /* Colors */
+  --global--color-black: #000;
+  --global--color-dark-gray: #28303d;
+  --global--color-gray: #39414d;
+  --global--color-light-gray: #f0f0f0;
+  --global--body-background: #e7e6f7;
+  --global--color-pink1: #827081;
+  --global--color-pink2: #aea3b0;
+  --global--color-burgundy: #461220;
+  --global--color-blue1: #c6d2ed;
+  --global--color-blue2: #b5dce9;
+  --global--color-blue3: #2f5b84;
+}
 /* Sections
 	 ========================================================================== */
 
@@ -743,6 +758,23 @@ textarea {
 
 /* Posts and pages
 --------------------------------------------- */
+
+/* Header */
+
+.cart-icon > a > svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.account-icon > a > svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.menu-header-secondary-menu-container > ul {
+  list-style-type: none;
+}
+
 .sticky {
   display: block;
 }
