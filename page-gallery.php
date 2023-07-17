@@ -17,17 +17,6 @@ get_header();
 
 		<?php
 		if (function_exists('get_field')) {
-			$back_home_page_svg = get_field('back_to_home_page_svg');
-			if ($back_home_page_svg) {
-				echo $back_home_page_svg;
-			}
-
-			$back_home_link = get_field('back_to_home_page_link');
-			if ($back_home_link) {
-				$back_home_link_url = $back_home_link['url'];
-				$back_home_link_title = $back_home_link['title'];
-				echo '<a class="hero-cta" href="' . $back_home_link_url . '">' . $back_home_link_title . '</a>';
-			}
 
 			$gallery_section_heading = get_field('gallery_section_heading');
 			if ($gallery_section_heading) {
