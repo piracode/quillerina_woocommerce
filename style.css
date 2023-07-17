@@ -741,6 +741,14 @@ textarea {
   display: inline-block;
 }
 
+/* .site-header[aria-expanded='true'] {
+  background-color: red;
+}
+
+.main-navigation .toggled {
+  background-color: red;
+} */
+
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
@@ -1029,6 +1037,34 @@ footer .site-info > p {
   margin-bottom: 0;
   text-align: center;
 }
+
+/* Custom Orders Page */
+
+.section-custom-orders > h3 {
+  color: var(--global--color-blue3);
+}
+
+.section-custom-orders {
+  padding: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.pet-portraits-gallery {
+  background-color: var(--global--color-black);
+  padding: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.pet-portraits-gallery h2 {
+  color: var(--global--color-blue1);
+}
+
+.page-id-72 .custom-orders-cta {
+  background-color: var(--global--color-blue3);
+}
+
+.page-id-72 footer {
+  background-color: var(--global--color-burgundy);
+}
+
 .sticky {
   display: block;
 }

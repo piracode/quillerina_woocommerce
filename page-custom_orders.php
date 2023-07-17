@@ -17,17 +17,17 @@ get_header();
 
 		<?php
 		if (function_exists('get_field')) {
-			$back_home_page_svg = get_field('back_home_page_svg');
-			if ($back_home_page_svg) {
-				echo $back_home_page_svg;
-			}
+			// $back_home_page_svg = get_field('back_home_page_svg');
+			// if ($back_home_page_svg) {
+			// 	echo $back_home_page_svg;
+			// }
 
-			$back_home_link = get_field('back_home_link');
-			if ($back_home_link) {
-				$back_home_link_url = $back_home_link['url'];
-				$back_home_link_title = $back_home_link['title'];
-				echo '<a class="hero-cta" href="' . $back_home_link_url . '">' . $back_home_link_title . '</a>';
-			}
+			// $back_home_link = get_field('back_home_link');
+			// if ($back_home_link) {
+			// 	$back_home_link_url = $back_home_link['url'];
+			// 	$back_home_link_title = $back_home_link['title'];
+			// 	echo '<a class="hero-cta" href="' . $back_home_link_url . '">' . $back_home_link_title . '</a>';
+			// }
 
 			$custom_orders_heading = get_field('custom_orders_heading');
 			if ($custom_orders_heading) {
@@ -44,19 +44,19 @@ get_header();
 				echo '<p class="pet_portrait_orders_description">' . $pet_portrait_orders_description . '</p>';
 			}
 
-			$get_your_pet_portrait_link = get_field('get_your_pet_portrait_link');
-			if ($get_your_pet_portrait_link) {
-				$get_your_pet_portrait_link_url = $get_your_pet_portrait_link['url'];
-				$get_your_pet_portrait_link_title = $get_your_pet_portrait_link['title'];
-				echo '<a class="hero-cta" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
-			}
+			// $get_your_pet_portrait_link = get_field('get_your_pet_portrait_link');
+			// if ($get_your_pet_portrait_link) {
+			// 	$get_your_pet_portrait_link_url = $get_your_pet_portrait_link['url'];
+			// 	$get_your_pet_portrait_link_title = $get_your_pet_portrait_link['title'];
+			// 	echo '<a class="hero-cta" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
+			// }
 
-			$portraits_gallery_link = get_field('portraits_gallery_link');
-			if ($portraits_gallery_link) {
-				$portraits_gallery_link_url = $portraits_gallery_link['url'];
-				$portraits_gallery_link_title = $portraits_gallery_link['title'];
-				echo '<a class="hero-cta" href="' . $portraits_gallery_link_url . '">' . $portraits_gallery_link_title . '</a>';
-			}
+			// $portraits_gallery_link = get_field('portraits_gallery_link');
+			// if ($portraits_gallery_link) {
+			// 	$portraits_gallery_link_url = $portraits_gallery_link['url'];
+			// 	$portraits_gallery_link_title = $portraits_gallery_link['title'];
+			// 	echo '<a class="hero-cta" href="' . $portraits_gallery_link_url . '">' . $portraits_gallery_link_title . '</a>';
+			// }
 
 			$earrings_and_artwork_subheading = get_field('earrings_and_artwork_subheading');
 			if ($earrings_and_artwork_subheading) {
@@ -67,22 +67,27 @@ get_header();
 			if ($earrings_and_artwork_description) {
 				echo '<p class="earrings_and_artwork_description">' . $earrings_and_artwork_description . '</p>';
 			}
+		?>
+			<div class="cta-container">
+
+			<?php
+
 
 			$shop_now = get_field('shop_now');
 			if ($shop_now) {
 				$shop_now_url = $shop_now['url'];
 				$shop_now_title = $shop_now['title'];
-				echo '<a class="hero-cta" href="' . $shop_now_url . '">' . $shop_now_title . '</a>';
+				echo '<a class="shop-now-cta button"" href="' . $shop_now_url . '">' . $shop_now_title . '</a>';
 			}
 
 			$get_your_pet_portrait_link = get_field('get_your_pet_portrait_link');
 			if ($get_your_pet_portrait_link) {
 				$get_your_pet_portrait_link_url = $get_your_pet_portrait_link['url'];
 				$get_your_pet_portrait_link_title = $get_your_pet_portrait_link['title'];
-				echo '<a class="hero-cta" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
+				echo '<a class="custom-orders-cta button" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
 			}
 		}
-		?>
+			?>
 	</section>
 
 	<section class="pet-portraits-gallery">
@@ -129,11 +134,16 @@ get_header();
 
 		if (function_exists('get_field')) {
 
+		?>
+			<div class="cta-container">
+
+			<?php
+
 			$get_your_pet_portrait_link = get_field('get_your_pet_portrait_link');
 			if ($get_your_pet_portrait_link) {
 				$get_your_pet_portrait_link_url = $get_your_pet_portrait_link['url'];
 				$get_your_pet_portrait_link_title = $get_your_pet_portrait_link['title'];
-				echo '<a class="hero-cta" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
+				echo '<a class="custom-orders-cta button" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
 			}
 
 
@@ -141,10 +151,10 @@ get_header();
 			if ($shop_now) {
 				$shop_now_url = $shop_now['url'];
 				$shop_now_title = $shop_now['title'];
-				echo '<a class="hero-cta" href="' . $shop_now_url . '">' . $shop_now_title . '</a>';
+				echo '<a class="shop-now-cta button" href="' . $shop_now_url . '">' . $shop_now_title . '</a>';
 			}
 		}
-		?>
+			?>
 	</section>
 
 
