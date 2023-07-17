@@ -437,6 +437,7 @@ h6 {
 
 p {
   margin-bottom: 1.5em;
+  font-family: 'Playfair Display', sans-serif;
 }
 
 dfn,
@@ -489,8 +490,9 @@ big {
 
 /* Elements
 --------------------------------------------- */
+
 body {
-  background: #fff;
+  background: var(--global--body-background);
 }
 
 hr {
@@ -779,6 +781,19 @@ textarea {
 
 /* Header */
 
+.site-heading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--global--body-background);
+}
+
+body {
+  padding-top: 100px;
+}
+
 .cart-icon > a > svg {
   width: 2rem;
   height: 2rem;
@@ -792,11 +807,14 @@ textarea {
 .menu-header-secondary-menu-container > ul {
   list-style-type: none;
   margin: 0;
-  padding-right: 0.3rem;
 }
 .menu-header-secondary-menu-container > .menu {
   display: flex;
-  gap: 0.7rem;
+  gap: 0.3rem;
+}
+
+.menu-toggle {
+  padding: 0;
 }
 
 .site-header {
@@ -821,7 +839,7 @@ textarea {
 .site-title {
   margin-bottom: 0;
   font-family: 'Alex Brush', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .header-line-above,
@@ -840,13 +858,184 @@ textarea {
   margin: 1rem 0 0 0;
 }
 
+/* Home Page */
+
+/* .page-id-35 {
+  padding: 0 0.5rem 0 0.5rem;
+  background-clip: content-box;
+} */
+
+.button {
+  border-radius: 5rem;
+  padding: 0.75rem 1.75rem;
+}
+
+.shop-now-cta {
+  background-color: var(--global--color-pink1);
+}
+
+.shop-now-cta,
+.custom-orders-cta {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+a.shop-now-cta,
+a.custom-orders-cta {
+  color: #fff;
+}
+
+.custom-orders-cta {
+  background-color: var(--global--color-black);
+}
+
+.cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* img.nivo-main-image {
+  border-radius: 50%;
+}
+
+.section-hero #metaslider-id-685 > .metaslider_container_685 {
+  width: 100px;
+} */
+/* div.metaslider-nivo > div.slider-wrapper {
+  width: 100px;
+} */
+
+.site-heading-container {
+  /* padding-bottom: 4rem; */
+  padding: 0 0.5rem 1rem 0.5rem;
+}
+
+.section-hero {
+  /* padding-bottom: 5rem; */
+  padding: 0 0.5rem 5rem 0.5rem;
+}
+
+.description-art-section {
+  background-color: var(--global--color-black);
+  padding: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.faq-section {
+  background-color: var(--global--color-burgundy);
+  padding: 2rem 0.5rem 2rem 0.5rem;
+  color: var(--global--body-background);
+}
+
+.featured-artwork {
+  padding: 2rem 0.5rem 2rem 0.5rem;
+}
+.description-art-section > h2 {
+  color: var(--global--color-blue1);
+}
+.art-description-subheading {
+  color: var(--global--color-blue2);
+}
+.description-art-section > p {
+  color: #fff;
+}
+.description-art-section svg {
+  fill: #a6dff3;
+}
+
+.description-art-section .shop-now-cta {
+  background-color: var(--global--color-burgundy);
+}
+.description-art-section .custom-orders-cta {
+  background-color: var(--global--color-blue3);
+}
+
+.description-art-title-box {
+  display: flex;
+  gap: 1rem;
+}
+.featured-artwork h2 {
+  padding-bottom: 2rem;
+}
+
+.gallery-item img {
+  width: 18rem;
+  margin: auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item {
+  padding-bottom: 2rem;
+}
+
+.faq-section > h2 {
+  color: var(--global--color-blue1);
+}
+
+.faq-section svg {
+  fill: #ffcccc;
+  width: 40px;
+  height: auto;
+}
+
+.faq-section h3 {
+  color: #ffcccc;
+}
+
+.faq-heading-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.faq-box-4 svg {
+  width: 3rem;
+  height: auto;
+}
+.faq-box-5 svg {
+  width: 4rem;
+  height: auto;
+}
+
+.faq-section .custom-orders-cta {
+  background-color: #ffcccc;
+  color: #000;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--global--color-black);
+  padding: 2rem 0.5rem 0.5rem 1rem;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+footer .menu li.menu-item-has-children > a {
+  color: var(--global--color-blue1);
+}
+
+.menu-item-object-page a,
+.menu-item-object-custom a {
+  color: var(--global--color-pink2);
+}
+
+footer .site-info > p {
+  margin-bottom: 0;
+  text-align: center;
+}
 .sticky {
   display: block;
 }
 
 .post,
 .page {
-  margin: 0 0 1.5em;
+  /* margin: 0 0 1.5em; */
 }
 
 .updated:not(.published) {

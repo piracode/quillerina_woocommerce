@@ -14,7 +14,6 @@
 
 <footer id="colophon" class="site-footer">
 	<nav id="site-navigation" class="footer-navigation">
-		<button class="menu-toggle" aria-controls="footer-menu" aria-expanded="false"><?php esc_html_e('Footer Menu', 'quillerina-theme'); ?></button>
 		<?php
 		wp_nav_menu(
 			array(
