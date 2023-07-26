@@ -187,6 +187,33 @@ function enqueue_custom_fonts()
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
 
 
+// Function to change the login logo and background color
+function custom_login()
+{
+	echo '<style type="text/css">
+	body.login{
+		background-color: #C6D2ED;
+	}
+        #login h1 a,
+        .login h1 a {
+            background-image: url(' . get_stylesheet_directory_uri() . '/images/logo.svg);
+            height: 65px;
+            width: 320px;
+            background-size: 320px 65px;
+            background-repeat: no-repeat;
+            padding-bottom: 30px;
+        }
+		
+    </style>';
+}
+add_action('login_enqueue_scripts', 'custom_login');
+
+// Function to change the login logo URL
+function custom_url_login()
+{
+	return home_url();
+}
+add_filter('login_headerurl', 'custom_url_login');
 
 //Add normalize.css
 function add_normalize_CSS()
@@ -194,9 +221,6 @@ function add_normalize_CSS()
 	wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css');
 }
 add_action('wp_enqueue_scripts', 'add_normalize_CSS');
-
-
-
 
 /**
  * Implement the Custom Header feature.
