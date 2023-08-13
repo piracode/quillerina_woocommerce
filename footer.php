@@ -11,7 +11,6 @@
  */
 
 ?>
-
 <footer id="colophon" class="site-footer">
 	<nav id="site-navigation" class="footer-navigation">
 		<?php
@@ -25,6 +24,7 @@
 	</nav><!-- #site-navigation -->
 	<div class="site-info">
 		<p>&copy; <?php echo date('Y'); ?> <?php echo esc_html__('Quillerina Paper Art 2023', 'your-text-domain'); ?></p>
+		<p>Website by <a href="https://martha.codes" target='_blank' rel='noopener noreferrer'>Martha Villa Martin</a></p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

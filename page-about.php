@@ -21,13 +21,19 @@ get_header();
 
 			$about_page_heading = get_field('about_page_heading');
 			if ($about_page_heading) {
-				echo '<h2 class="about_page_heading">' . $about_page_heading . '</h2>';
+				echo '<h1 class="about_page_heading">' . $about_page_heading . '</h1>';
 			}
 
 			$about_page_subheading = get_field('about_page_subheading');
 			if ($about_page_subheading) {
 				echo '<h3 class="about_page_subheading">' . $about_page_subheading . '</h3>';
 			}
+
+			$about_image = get_field('about_picture');
+			if ($about_image && isset($about_image['url'])) {
+				echo '<img class="about-img" src="' . esc_url($about_image['url']) . '" alt="Martha villa Martin and her biggest quilling artwork">';
+			}
+
 
 			$about_me_text = get_field('about_me_text');
 			if ($about_me_text) {

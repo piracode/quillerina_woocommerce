@@ -724,6 +724,10 @@ textarea {
   display: block;
 }
 
+ul#primary-menu {
+  padding: 1rem;
+}
+
 .menu-toggle {
   border: none;
   background-color: var(--global--body-background);
@@ -741,15 +745,31 @@ textarea {
   display: inline-block;
 }
 
-/* .site-header[aria-expanded='true'] {
-  background-color: red;
+.menu.nav-menu {
+  position: absolute;
+  top: 43px;
+  background-color: var(--global--body-background);
+  background-color: #000;
+  border: #212020 3px solid;
+  border-radius: 5px;
 }
 
-.main-navigation .toggled {
-  background-color: red;
-} */
+li.menu-item a {
+  color: #000;
+  color: #fff;
+  padding-bottom: 10px;
+}
 
-@media screen and (min-width: 37.5em) {
+.site-header {
+  position: relative;
+}
+
+.menu-main-menu-container ul.sub-menu {
+  position: static;
+  padding-left: 1.5rem;
+}
+
+/* @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
@@ -757,7 +777,7 @@ textarea {
   .main-navigation ul {
     display: flex;
   }
-}
+} */
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
@@ -799,7 +819,7 @@ textarea {
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .cart-icon > a > svg {
@@ -850,6 +870,16 @@ body {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 37.5em) {
+  .section-title {
+    padding: 0 1.5rem 5rem 1.5rem;
+  }
+}
+
+.site-title a {
+  color: var(--global--color-burgundy);
+}
+
 .header-line-above,
 .header-line-below {
   content: '';
@@ -898,36 +928,128 @@ a.custom-orders-cta {
   background-color: var(--global--color-black);
 }
 
+.custom-orders-heading,
+.pet_portraits_gallery_heading {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.custom-orders-heading {
+  padding-bottom: 1.5rem;
+}
+
 .cta-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 17rem;
+  margin: auto;
 }
-
-/* img.nivo-main-image {
-  border-radius: 50%;
-}
-
-.section-hero #metaslider-id-685 > .metaslider_container_685 {
-  width: 100px;
-} */
-/* div.metaslider-nivo > div.slider-wrapper {
-  width: 100px;
-} */
 
 .site-heading-container {
   /* padding-bottom: 4rem; */
   padding: 0 0.5rem 1rem 0.5rem;
 }
 
+@media screen and (min-width: 37.5em) {
+  .site-heading-container {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 68.5em) {
+  .site-heading-container {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 84em) {
+  .site-heading-container {
+    padding: 0 5rem;
+  }
+}
 .section-hero {
   /* padding-bottom: 5rem; */
   padding: 0 0.5rem 5rem 0.5rem;
 }
 
+.text-description {
+  /* margin-bottom: 5rem; */
+  color: #fff;
+}
+/* .description-art-section img {
+  padding-top: 5rem;
+} */
+
+.section-hero h1 {
+  text-align: center;
+}
+
+@media screen and (min-width: 25em) {
+  .section-hero {
+    padding: 0 1.5rem 5rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 35em) {
+  .section-hero {
+    max-width: 34.5rem;
+    margin: auto;
+  }
+}
+
+.page-id-35 h2 {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+}
+
+.earrings-img-box {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.earrings-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description-art-section p {
+  padding: 1rem 0 1rem 0;
+}
+
+.description-art-section h2 {
+  color: var(--global--color-blue1);
+}
 .description-art-section {
   background-color: var(--global--color-black);
-  padding: 2rem 0.5rem 2rem 0.5rem;
+  padding: 2rem 0.5rem;
+}
+
+@media screen and (min-width: 25em) {
+  .description-art-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .description-art-section p,
+  .description-art-container {
+    width: 23.5rem;
+    margin: auto;
+  }
+}
+
+.description-art-section img {
+  border-radius: 15px;
+  max-width: 18.75rem;
+  margin: auto;
+}
+
+.description-art-section .cta-container,
+.faq-section .cta-container {
+  padding: 2rem 0;
 }
 
 .faq-section {
@@ -936,11 +1058,38 @@ a.custom-orders-cta {
   color: var(--global--body-background);
 }
 
+@media screen and (min-width: 25em) {
+  .faq-section {
+    padding: 2rem 1.5rem 2rem 1.5rem;
+  }
+}
+
+.faq-container {
+  max-width: 28rem;
+  margin: auto;
+}
+
+@media screen and (min-width: 56.25em) {
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: none;
+  }
+}
+
+.faq-section h2 {
+  padding-bottom: 2rem;
+}
+
+.faq-heading-box {
+  padding-bottom: 1.5rem;
+}
 .featured-artwork {
   padding: 2rem 0.5rem 2rem 0.5rem;
 }
 .description-art-section > h2 {
-  color: var(--global--color-blue1);
+  /* color: var(--global--color-blue1); */
 }
 .art-description-subheading {
   color: var(--global--color-blue2);
@@ -952,6 +1101,31 @@ a.custom-orders-cta {
   fill: #a6dff3;
 }
 
+@media screen and (min-width: 50em) {
+  .description-art-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .dynamic-paperartwork {
+    grid-column: 1/3;
+  }
+
+  .dynamic-paper-art-description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .description-art-section .cta-container {
+    grid-column: 1/3;
+  }
+}
+
+.art-type-box {
+  margin-top: 4rem;
+}
 .description-art-section .shop-now-cta {
   background-color: var(--global--color-burgundy);
 }
@@ -963,16 +1137,55 @@ a.custom-orders-cta {
   display: flex;
   gap: 1rem;
 }
+
+.description-art-title-box ~ p {
+  color: #fff;
+}
+
+.description-art-title-box:first-of-type {
+  margin-top: 1rem;
+}
 .featured-artwork h2 {
   padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 40.625em) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 75em) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
 }
 
 .gallery-item img {
   width: 18rem;
   margin: auto;
   display: block;
+  height: 20rem;
+  object-fit: cover;
   border-radius: 15px;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.gallery_section_heading {
+  text-align: center;
 }
 
 .gallery-item {
@@ -996,6 +1209,7 @@ a.custom-orders-cta {
 .faq-heading-box {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .faq-box-4 svg {
@@ -1034,8 +1248,25 @@ footer .menu li.menu-item-has-children > a {
 }
 
 footer .site-info > p {
-  margin-bottom: 0;
+  margin-bottom: 0.3rem;
   text-align: center;
+  padding-top: 0.5rem;
+}
+
+.site-info {
+  color: var(--global--color-blue2);
+}
+.menu-item-677 > a {
+  font-size: 1.5rem;
+}
+
+.menu-footer-menu-container {
+  padding-bottom: 1.5rem;
+}
+
+.site-info a {
+  color: #a6dff3;
+  text-decoration: underline;
 }
 
 /* Custom Orders Page */
@@ -1045,12 +1276,24 @@ footer .site-info > p {
 }
 
 .section-custom-orders {
-  padding: 2rem 0.5rem 2rem 0.5rem;
+  padding: 0 0.5rem 2rem 0.5rem;
+}
+
+.section-custom-orders .cta-container {
+  padding: 2rem 0;
 }
 
 .pet-portraits-gallery {
   background-color: var(--global--color-black);
   padding: 2rem 0.5rem 2rem 0.5rem;
+}
+@media screen and (min-width: 25em) {
+  .pet-portraits-gallery {
+    padding: 5rem 0.5rem 2rem 0.5rem;
+  }
+  .pet_portraits_gallery_heading {
+    padding-bottom: 2rem;
+  }
 }
 
 .pet-portraits-gallery h2 {
@@ -1065,6 +1308,42 @@ footer .site-info > p {
   background-color: var(--global--color-burgundy);
 }
 
+/* About Page */
+
+h1 {
+  text-align: center;
+}
+
+.section-about > h3 {
+  color: var(--global--color-blue3);
+  text-align: center;
+}
+
+.page-id-89 .cta-container {
+  padding: 3rem 0;
+}
+.page-id-89 .contact_us_heading {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.section-about {
+  padding: 0 0.5rem 5rem 0.5rem;
+}
+
+.about-img {
+  width: 20rem;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 25em) {
+  .section-about {
+    padding: 0 1.5rem 5rem 1.5rem;
+  }
+}
 .sticky {
   display: block;
 }
@@ -1072,6 +1351,10 @@ footer .site-info > p {
 .post,
 .page {
   /* margin: 0 0 1.5em; */
+}
+
+.site {
+  padding-top: 3rem;
 }
 
 .updated:not(.published) {

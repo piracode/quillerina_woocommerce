@@ -20,7 +20,7 @@ get_header();
 
 			$gallery_section_heading = get_field('gallery_section_heading');
 			if ($gallery_section_heading) {
-				echo '<h2 class="gallery_section_heading">' . $gallery_section_heading . '</h2>';
+				echo '<h1 class="gallery_section_heading">' . $gallery_section_heading . '</h1>';
 			}
 
 			$gallery_section_text = get_field('gallery_section_text');

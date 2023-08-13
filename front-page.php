@@ -26,7 +26,8 @@ get_header();
 
 				$welcome_message = get_field('hero_section')['welcome_message'];
 				if ($welcome_message) {
-					echo '<p>' . $welcome_message . '</p>';
+					// echo '<p>' . $welcome_message . '</p>';
+					echo $welcome_message;
 				}
 			?>
 				<div class="cta-container">
@@ -63,8 +64,9 @@ get_header();
 			if (function_exists('get_field')) {
 
 				//Pet Portraits Description
-
 				$pet_portrait_featured_image = get_field('description_section')['pet_portrait_featured_image'];
+
+				echo '<div class="art-type-box">';
 				if ($pet_portrait_featured_image && isset($pet_portrait_featured_image['url'])) {
 					echo '<img src="' . esc_url($pet_portrait_featured_image['url']) . '" alt="Pet Portrait Featured Image">';
 				}
@@ -76,14 +78,20 @@ get_header();
 
 				$pet_portrait_text = get_field('description_section')['pet_portrait_text'];
 				if ($pet_portrait_text) {
-					echo '<p>' . $pet_portrait_text . '</p>';
+					echo '<p class="text-description">' . $pet_portrait_text . '</p>';
 				}
+
+				echo '</div>';
 
 
 				//Earrings Description
+				echo '<div class="art-type-box">';
 				$earrings_featured_image = get_field('description_section')['earrings_featured_image'];
 				if ($earrings_featured_image && isset($earrings_featured_image['url'])) {
+					echo '<div class="earrings-img-box">';
+
 					echo '<img src="' . esc_url($earrings_featured_image['url']) . '" alt="Earrings Featured Image">';
+					echo '</div>';
 				}
 
 				$earrings_heading = get_field('description_section')['earrings_heading'];
@@ -93,11 +101,12 @@ get_header();
 
 				$earrings_text = get_field('description_section')['earrings_text'];
 				if ($earrings_text) {
-					echo '<p>' . $earrings_text . '</p>';
+					echo '<p class="text-description">' . $earrings_text . '</p>';
 				}
+				echo '</div>';
 
 				//Other Artowrk Description
-
+				echo '<div class="art-type-box dynamic-paperartwork">';
 				$artwork_featured_image = get_field('description_section')['artwork_featured_image'];
 				if ($artwork_featured_image && isset($artwork_featured_image['url'])) {
 					echo '<img src="' . esc_url($artwork_featured_image['url']) . '" alt="Artwork Featured Image">';
@@ -107,114 +116,127 @@ get_header();
 				if ($artwork_heading) {
 					echo '<h2>' . $artwork_heading . '</h2>';
 				}
+				echo '<div class="dynamic-paper-art-description">';
 
 				//Landscapes
 
 			?>
-				<div class="description-art-title-box">
+				<article class="description-art-container">
+					<div class="description-art-title-box">
 
 
+						<?php
+						$landscape_svg = get_field('description_section')['landscape_svg'];
+						if ($landscape_svg) {
+							echo '<div>' . $landscape_svg . '</div>';
+						}
+
+						$landscape_subheading = get_field('description_section')['landscape_subheading'];
+						if ($landscape_subheading) {
+							echo '<h3 class="art-description-subheading">' . $landscape_subheading . '</h3>';
+						}
+
+						?>
+					</div>
 					<?php
-					$landscape_svg = get_field('description_section')['landscape_svg'];
-					if ($landscape_svg) {
-						echo '<div>' . $landscape_svg . '</div>';
+
+
+					$landscape_text = get_field('description_section')['landscape_text'];
+					if ($landscape_text) {
+						echo '<p>' . $landscape_text . '</p>';
 					}
 
-					$landscape_subheading = get_field('description_section')['landscape_subheading'];
-					if ($landscape_subheading) {
-						echo '<h3 class="art-description-subheading">' . $landscape_subheading . '</h3>';
-					}
+
+					//Floral
 
 					?>
-				</div>
-				<?php
+				</article>
+
+				<article class="description-art-container">
+					<div class="description-art-title-box">
 
 
-				$landscape_text = get_field('description_section')['landscape_text'];
-				if ($landscape_text) {
-					echo '<p>' . $landscape_text . '</p>';
-				}
+						<?php
+						$floral_svg = get_field('description_section')['floral_svg'];
+						if ($floral_svg) {
+							echo '<div>' . $floral_svg . '</div>';
+						}
 
-				//Floral
+						$floral_art_subheading = get_field('description_section')['floral_art_subheading'];
+						if ($floral_art_subheading) {
+							echo '<h3 class="art-description-subheading">' . $floral_art_subheading . '</h3>';
+						}
 
-				?>
-				<div class="description-art-title-box">
-
-
-					<?php
-					$floral_svg = get_field('description_section')['floral_svg'];
-					if ($floral_svg) {
-						echo '<div>' . $floral_svg . '</div>';
-					}
-
-					$floral_art_subheading = get_field('description_section')['floral_art_subheading'];
-					if ($floral_art_subheading) {
-						echo '<h3 class="art-description-subheading">' . $floral_art_subheading . '</h3>';
-					}
-
-					?>
-				</div>
-				<?php
-
-				$floral_art_text = get_field('description_section')['floral_art_text'];
-				if ($floral_art_text) {
-					echo '<p>' . $floral_art_text . '</p>';
-				}
-
-				//Ornaments
-
-				?>
-				<div class="description-art-title-box">
-
+						?>
+					</div>
 
 					<?php
 
-					$ornaments_svg = get_field('description_section')['ornaments_svg'];
-					if ($ornaments_svg) {
-						echo '<div>' . $ornaments_svg . '</div>';
+					$floral_art_text = get_field('description_section')['floral_art_text'];
+					if ($floral_art_text) {
+						echo '<p>' . $floral_art_text . '</p>';
 					}
 
-					$ornaments_subheading = get_field('description_section')['ornaments_subheading'];
-					if ($ornaments_subheading) {
-						echo '<h3 class="art-description-subheading">' . $ornaments_subheading . '</h3>';
-					}
+
+					//Ornaments
 
 					?>
-				</div>
-				<?php
-				$ornaments_text = get_field('description_section')['ornaments_text'];
-				if ($ornaments_text) {
-					echo '<p>' . $ornaments_text . '</p>';
-				}
-
-				//Commissions
-
-				?>
-				<div class="description-art-title-box">
+				</article>
+				<article class="description-art-container">
+					<div class="description-art-title-box">
 
 
+						<?php
+
+						$ornaments_svg = get_field('description_section')['ornaments_svg'];
+						if ($ornaments_svg) {
+							echo '<div>' . $ornaments_svg . '</div>';
+						}
+
+						$ornaments_subheading = get_field('description_section')['ornaments_subheading'];
+						if ($ornaments_subheading) {
+							echo '<h3 class="art-description-subheading">' . $ornaments_subheading . '</h3>';
+						}
+
+						?>
+					</div>
+					<?php
+					$ornaments_text = get_field('description_section')['ornaments_text'];
+					if ($ornaments_text) {
+						echo '<p>' . $ornaments_text . '</p>';
+					}
+
+
+					//Commissions
+
+					?>
+				</article>
+				<article class="description-art-container">
+					<div class="description-art-title-box">
+
+
+						<?php
+
+						$commissions_svg = get_field('description_section')['commissions_svg'];
+						if ($commissions_svg) {
+							echo '<div>' . $commissions_svg . '</div>';
+						}
+
+						$commissions_subheading = get_field('description_section')['commissions_subheading'];
+						if ($commissions_subheading) {
+							echo '<h3 class="art-description-subheading">' . $commissions_subheading . '</h3>';
+						}
+
+						?>
+					</div>
 					<?php
 
-					$commissions_svg = get_field('description_section')['commissions_svg'];
-					if ($commissions_svg) {
-						echo '<div>' . $commissions_svg . '</div>';
+					$commissions_text = get_field('description_section')['commisssions_text'];
+					if ($commissions_text) {
+						echo '<p>' . $commissions_text . '</p>';
 					}
-
-					$commissions_subheading = get_field('description_section')['commissions_subheading'];
-					if ($commissions_subheading) {
-						echo '<h3 class="art-description-subheading">' . $commissions_subheading . '</h3>';
-					}
-
 					?>
-				</div>
-				<?php
-
-				$commissions_text = get_field('description_section')['commisssions_text'];
-				if ($commissions_text) {
-					echo '<p>' . $commissions_text . '</p>';
-				}
-				?>
-
+				</article>
 				<div class="cta-container">
 
 				<?php
@@ -282,10 +304,7 @@ get_header();
 
 
 
-		<section class="faq-section">
-
-
-
+		<section class="faq-section" id="faq">
 
 			<?php
 			if (function_exists('get_field')) {
@@ -296,8 +315,11 @@ get_header();
 					echo '<h2>' . $faq_heading . '</h2>';
 				}
 
+				echo '<div class="faq-container">'; // Start wrapping div container
+
 				for ($i = 1; $i <= 5; $i++) {
-					echo '<div class="faq-heading-box faq-box-' . $i . '">'; // Start div container
+					echo '<article class="faq-box">';
+					echo '<div class="faq-heading-box faq-box-' . $i . '">';
 
 					$question_svg = $faq_section['question' . $i . '_svg'];
 					if ($question_svg) {
@@ -309,15 +331,25 @@ get_header();
 						echo '<h3>' . $question_heading . '</h3>';
 					}
 
-					echo '</div>'; // End div container
+					echo '</div>';
+
 
 					$question_text = $faq_section['question' . $i . '_text'];
 					if ($question_text) {
-						echo '<p>' . $question_text . '</p>';
+						// Check if it's the last question and avoid wrapping in a <p> tag
+						if ($i === 5) {
+							echo $question_text;
+						} else {
+							echo '<p>' . $question_text . '</p>';
+							echo '</article>';
+						}
 					}
 				}
+
+				echo '</div>'; // End wrapping div container
 			}
 			?>
+
 			<?php
 
 			if (function_exists('get_field')) {

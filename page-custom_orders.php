@@ -17,21 +17,9 @@ get_header();
 
 		<?php
 		if (function_exists('get_field')) {
-			// $back_home_page_svg = get_field('back_home_page_svg');
-			// if ($back_home_page_svg) {
-			// 	echo $back_home_page_svg;
-			// }
-
-			// $back_home_link = get_field('back_home_link');
-			// if ($back_home_link) {
-			// 	$back_home_link_url = $back_home_link['url'];
-			// 	$back_home_link_title = $back_home_link['title'];
-			// 	echo '<a class="hero-cta" href="' . $back_home_link_url . '">' . $back_home_link_title . '</a>';
-			// }
-
 			$custom_orders_heading = get_field('custom_orders_heading');
 			if ($custom_orders_heading) {
-				echo '<h2 class="custom-orders-heading">' . $custom_orders_heading . '</h2>';
+				echo '<h1 class="custom-orders-heading">' . $custom_orders_heading . '</h1>';
 			}
 
 			$pet_portraits_subheading = get_field('pet_portraits_subheading');
@@ -43,21 +31,6 @@ get_header();
 			if ($pet_portrait_orders_description) {
 				echo '<p class="pet_portrait_orders_description">' . $pet_portrait_orders_description . '</p>';
 			}
-
-			// $get_your_pet_portrait_link = get_field('get_your_pet_portrait_link');
-			// if ($get_your_pet_portrait_link) {
-			// 	$get_your_pet_portrait_link_url = $get_your_pet_portrait_link['url'];
-			// 	$get_your_pet_portrait_link_title = $get_your_pet_portrait_link['title'];
-			// 	echo '<a class="hero-cta" href="' . $get_your_pet_portrait_link_url . '">' . $get_your_pet_portrait_link_title . '</a>';
-			// }
-
-			// $portraits_gallery_link = get_field('portraits_gallery_link');
-			// if ($portraits_gallery_link) {
-			// 	$portraits_gallery_link_url = $portraits_gallery_link['url'];
-			// 	$portraits_gallery_link_title = $portraits_gallery_link['title'];
-			// 	echo '<a class="hero-cta" href="' . $portraits_gallery_link_url . '">' . $portraits_gallery_link_title . '</a>';
-			// }
-
 			$earrings_and_artwork_subheading = get_field('earrings_and_artwork_subheading');
 			if ($earrings_and_artwork_subheading) {
 				echo '<h3 class="earrings_and_artwork_subheading">' . $earrings_and_artwork_subheading . '</h3>';
