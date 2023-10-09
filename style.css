@@ -80,11 +80,14 @@ html {
   --global--color-light-gray: #f0f0f0;
   --global--body-background: #e7e6f7;
   --global--color-pink1: #827081;
+  --global--color-pink1-hover: #987a97;
   --global--color-pink2: #aea3b0;
   --global--color-burgundy: #461220;
+  --global--color-burgundy-hover: #5d192b;
   --global--color-blue1: #c6d2ed;
   --global--color-blue2: #b5dce9;
   --global--color-blue3: #2f5b84;
+  --global--color-blue3-hover: #386d9f;
 }
 /* Sections
 	 ========================================================================== */
@@ -924,6 +927,27 @@ a.custom-orders-cta {
   color: #fff;
 }
 
+.section-hero .shop-now-cta:hover,
+.page-id-89 .shop-now-cta:hover,
+.page-id-72 .shop-now-cta:hover {
+  background-color: var(--global--color-pink1-hover);
+}
+.section-hero a.custom-orders-cta:hover,
+.page-id-89 .custom-orders-cta:hover {
+  background-color: var(--global--color-dark-gray);
+}
+
+.page-id-72 .custom-orders-cta:hover {
+  background-color: var(--global--color-blue3-hover);
+}
+
+.dynamic-paper-art-description .shop-now-cta:hover {
+  background-color: var(--global--color-burgundy-hover);
+}
+.dynamic-paper-art-description a.custom-orders-cta:hover {
+  background-color: var(--global--color-blue3-hover);
+}
+
 .custom-orders-cta {
   background-color: var(--global--color-black);
 }
@@ -946,6 +970,13 @@ a.custom-orders-cta {
   margin: auto;
 }
 
+@media screen and (min-width: 37.5em) {
+  .site-heading-container {
+    flex-wrap: nowrap;
+    width: auto;
+  }
+}
+
 .site-heading-container {
   /* padding-bottom: 4rem; */
   padding: 0 0.5rem 1rem 0.5rem;
@@ -954,6 +985,7 @@ a.custom-orders-cta {
 @media screen and (min-width: 37.5em) {
   .site-heading-container {
     padding: 0 2rem;
+    width: 100%;
   }
 }
 
@@ -1001,6 +1033,10 @@ a.custom-orders-cta {
 .page-id-35 h2 {
   text-align: center;
   padding: 1rem 0 1rem 0;
+}
+
+.gallery_section_text + p {
+  padding: 2rem;
 }
 
 .earrings-img-box {
@@ -1225,6 +1261,12 @@ a.custom-orders-cta {
   background-color: #ffcccc;
   color: #000;
 }
+.faq-section .custom-orders-cta:hover {
+  background-color: #ffaaaa;
+}
+.faq-section .shop-now-cta:hover {
+  background-color: var(--global--color-pink1-hover);
+}
 
 /* Footer */
 
@@ -1350,7 +1392,7 @@ h1 {
 
 @media (min-width: 29em) {
   .section-about {
-    width: 31rem;
+    max-width: 31rem;
     margin: 0 auto;
   }
 }
