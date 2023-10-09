@@ -64,7 +64,7 @@ get_header();
 				$thumbnail_id = get_post_thumbnail_id();
 				$thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
 				if ($thumbnail_url) {
-					echo '<div class="gallery-item">';
+					echo '<div class="gallery-item" data-aos="fade-up">';
 					echo '<img src="' . $thumbnail_url[0] . '" alt="Larger Image">';
 					echo '</div>';
 				}

@@ -222,6 +222,15 @@ function add_normalize_CSS()
 }
 add_action('wp_enqueue_scripts', 'add_normalize_CSS');
 
+//Function to add AOS animation
+function add_aos_animation()
+{
+	wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
+	wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js', false, null, true);
+	wp_enqueue_script('aos', get_template_directory_uri() . '/js/aos.js', array('AOS'), null, true);
+}
+add_action('wp_enqueue_scripts', 'add_aos_animation');
+
 /**
  * Implement the Custom Header feature.
  */

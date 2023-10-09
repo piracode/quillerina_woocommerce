@@ -66,7 +66,7 @@ get_header();
 				//Pet Portraits Description
 				$pet_portrait_featured_image = get_field('description_section')['pet_portrait_featured_image'];
 
-				echo '<div class="art-type-box">';
+				echo '<div class="art-type-box" data-aos="fade-up">';
 				if ($pet_portrait_featured_image && isset($pet_portrait_featured_image['url'])) {
 					echo '<img src="' . esc_url($pet_portrait_featured_image['url']) . '" alt="Pet Portrait Featured Image">';
 				}
@@ -85,7 +85,7 @@ get_header();
 
 
 				//Earrings Description
-				echo '<div class="art-type-box">';
+				echo '<div class="art-type-box" data-aos="fade-up">';
 				$earrings_featured_image = get_field('description_section')['earrings_featured_image'];
 				if ($earrings_featured_image && isset($earrings_featured_image['url'])) {
 					echo '<div class="earrings-img-box">';
@@ -106,7 +106,7 @@ get_header();
 				echo '</div>';
 
 				//Other Artowrk Description
-				echo '<div class="art-type-box dynamic-paperartwork">';
+				echo '<div class="art-type-box dynamic-paperartwork" data-aos="fade-up">';
 				$artwork_featured_image = get_field('description_section')['artwork_featured_image'];
 				if ($artwork_featured_image && isset($artwork_featured_image['url'])) {
 					echo '<img src="' . esc_url($artwork_featured_image['url']) . '" alt="Artwork Featured Image">';
@@ -291,7 +291,7 @@ get_header();
 					$thumbnail_id = get_post_thumbnail_id();
 					$thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
 					if ($thumbnail_url) {
-						echo '<div class="gallery-item">';
+						echo '<div class="gallery-item" data-aos="fade-up">';
 						echo '<img src="' . $thumbnail_url[0] . '" alt="Larger Image">';
 						echo '</div>';
 					}
