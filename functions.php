@@ -264,3 +264,11 @@ if (defined('JETPACK__VERSION')) {
 if (class_exists('WooCommerce')) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// Define a custom thumbnail size
+add_image_size('custom-thumbnail', 200, 200, false);
+
+// Display the custom thumbnail for the post
+if (has_post_thumbnail()) {
+	the_post_thumbnail('custom-thumbnail');
+}
