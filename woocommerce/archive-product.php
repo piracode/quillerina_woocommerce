@@ -17,6 +17,8 @@ $product_categories = get_terms(array(
 
 echo '<h1 class="shop-page-title">Discover Unique Handcrafted Treasures</h1>';
 
+echo '<div class="category-container">';
+
 foreach ($product_categories as $category) {
     // Get category link
     $category_link = esc_url(get_term_link($category));
@@ -37,6 +39,8 @@ foreach ($product_categories as $category) {
     echo '</a>';
     echo '</article>';
 }
+
+echo '</div>';
 
 
 get_footer('shop');

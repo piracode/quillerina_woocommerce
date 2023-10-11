@@ -971,7 +971,7 @@ a.custom-orders-cta {
 }
 
 @media screen and (min-width: 37.5em) {
-  .site-heading-container {
+  .cta-container {
     flex-wrap: nowrap;
     width: auto;
   }
@@ -1418,9 +1418,9 @@ h1 {
   /* margin: 0 0 1.5em; */
 }
 
-/* .site {
+.site {
   padding-top: 3rem;
-} */
+}
 
 .updated:not(.published) {
   display: none;
@@ -1664,4 +1664,19 @@ p.category-description {
 
 h1.shop-page-title {
   font-size: 1.7em;
+  max-width: 450px;
+  margin: 0.67em auto;
+}
+
+@media screen and (min-width: 650px) {
+  .archive .category-container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .archive article.category-link {
+    width: 41%;
+  }
 }

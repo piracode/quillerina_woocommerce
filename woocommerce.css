@@ -6,6 +6,11 @@ WooCommerce styles override
 
 /* Shop Page */
 
+.category-container{
+  margin: 0 auto;
+   max-width: 350px;
+}
+
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
   display: none;
 }
@@ -64,14 +69,20 @@ WooCommerce styles override
   align-items: center;
 }
 
-.page-id-131 .site {
+.page-id-131 .site,
+.page-id-129 .site {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.page-id-131 .site-main {
+.page-id-131 .site-main,
+.page-id-129 .site-main {
   flex-grow: 1;
+}
+.page-id-131 .site-footer,
+.page-id-129 .site-footer {
+  flex-grow: 0;
 }
 
 .woocommerce-breadcrumb,
