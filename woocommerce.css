@@ -1070,8 +1070,9 @@ p.no-comments {
 
 .product-thumbnail .attachment-custom-thumbnail {
   border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+}
+
+.product-thumbnail img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
