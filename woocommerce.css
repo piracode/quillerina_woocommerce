@@ -173,6 +173,11 @@ WooCommerce styles override
 
 .woocommerce-product-gallery__image img {
   margin: 0 auto;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 .woocommerce-Tabs-panel ol {
@@ -217,9 +222,15 @@ ul.products li.product img {
   margin: 0 auto;
 }
 
-.product-template-default {
+/* .product-template-default {
   padding: 0 0.5rem 2rem 0.5rem;
+} */
+
+.product-template-default  table.variations a.reset_variations {
+display: none;
 }
+
+
 
 .cart > .quantity {
   text-align: center;
@@ -385,6 +396,8 @@ tbody {
 
 tbody > tr {
   width: 17.25rem;
+  display: block;
+  gap: 1rem;
 }
 
 .product-thumbnail {
@@ -419,6 +432,16 @@ tbody > tr {
 ul.products {
   margin: 0;
   padding: 0;
+ 
+}
+
+@media screen and (min-width: 40em){
+  .single-product ul.products{
+    display: flex;
+  }
+  .single-product ul.products .product.type-product{
+    width: 50%;
+  }
 }
 
 ul.products li.product {
@@ -469,7 +492,7 @@ ul.products li.product .button {
   }
 
   ul.products.columns-3 li.product {
-    width: 30.79667%;
+    /* width: 30.79667%; */
   }
 
   /* ul.products.columns-4 li.product {
@@ -1023,4 +1046,32 @@ p.no-comments {
 
 .widget_price_filter .ui-slider-horizontal .ui-slider-range {
   height: 100%;
+}
+
+
+.product-template-default #buttons-container .paypal-button-co {
+  /* .product-template-default #buttons-container .paypal-button-row > .paypal-button { */
+  max-width: 22rem;
+  margin: 0 auto;
+  }
+
+  /* Center Paypal Button on the shop page */
+
+.product-template-default .ppc-button-wrapper #zoid-paypal-buttons-uid_206b33ba92_mtc6mda6mdy {
+  margin: auto;
+  display: block;
+}
+
+.product-template-default .ppc-button-wrapper #zoid-paypal-buttons-uid_206b33ba92_mtc6mda6mdy > iframe {
+  width: 200px; 
+}
+
+/* Cart Page */
+
+.product-thumbnail .attachment-custom-thumbnail {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }

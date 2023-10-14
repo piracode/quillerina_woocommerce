@@ -970,12 +970,12 @@ a.custom-orders-cta {
   margin: auto;
 }
 
-@media screen and (min-width: 37.5em) {
+/* @media screen and (min-width: 37.5em) {
   .cta-container {
     flex-wrap: nowrap;
     width: auto;
   }
-}
+} */
 
 .site-heading-container {
   /* padding-bottom: 4rem; */
@@ -1679,4 +1679,120 @@ h1.shop-page-title {
   .archive article.category-link {
     width: 41%;
   }
+}
+
+/* Ornaments shop section */
+
+.term-49 article.product-container {
+  box-shadow: 0px 1px 6px #778899;
+  border-radius: 1rem;
+  margin: 2rem 1rem;
+  background-color: #dedede;
+  padding: 2rem 1rem;
+}
+
+.term-49 article.product-container:hover {
+  background-color: #e2cfcf;
+}
+
+.term-49 article.product-container:hover button {
+  background-color: #dedede;
+}
+
+@media screen and (min-width: 650px) {
+  .term-49 .category-products-section {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.term-49 article.product-container button {
+  margin: 0 auto;
+  display: block;
+  border: none;
+  background-color: #e2cfcf;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.term-49 article.product-container button:hover {
+  background-color: #dbc0c0;
+}
+
+.term-49 article.product-container p {
+  text-align: center;
+}
+
+/* Single product Shop  */
+
+.woocommerce-variation-add-to-cart {
+  text-align: center;
+}
+
+.product-template-default .woocommerce-Tabs-panel {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.product-template-default .related-product {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-template-default .related-product a {
+  width: 100%;
+}
+
+.product-template-default .related-product-title {
+  text-align: center;
+}
+
+.product-template-default .related-product-price {
+  text-align: center;
+  display: block;
+}
+
+.product-template-default .related-product {
+  box-shadow: 0px 1px 6px #778899;
+  border-radius: 1rem;
+  margin: 2rem 1rem;
+  background-color: #dedede;
+  padding: 2rem 1rem;
+}
+
+.product-template-default .related-product:hover {
+  background-color: #e2cfcf;
+}
+
+.product-template-default .related-product:hover a:last-of-type {
+  background-color: #dedede;
+}
+
+.product-template-default .related-product a:last-of-type:hover {
+  background-color: #dbc0c0;
+}
+.product-template-default .related-product a:last-of-type {
+  text-align: center;
+  display: block;
+  background-color: #e2cfcf;
+  padding: 1rem 0rem;
+  border-radius: 1rem;
+  margin: 1rem 3rem;
+}
+.product-template-default footer {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 40em) {
+  .product-template-default .related-product {
+    width: 50%;
+  }
+}
+
+.product-template-default .site-main {
+  max-width: 1250px;
+  margin: 0 auto;
 }
