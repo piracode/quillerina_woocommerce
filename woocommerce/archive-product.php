@@ -25,7 +25,37 @@ foreach ($product_categories as $category) {
 
     // Display category title, image, and description wrapped in a link
     echo '<article class="category-link">';
-    echo '<a href="' . $category_link . '">';
+
+    // Check if this is the "Pet Portraits" category
+    if ($category->slug === 'pet-portraits') {
+        // Get the first product in the "Pet Portraits" category
+        $args = array(
+            'post_type' => 'product',
+            'posts_per_page' => 1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field' => 'slug',
+                    'terms' => 'pet-portraits'  // category slug
+                )
+            )
+        );
+        $pet_portraits_product = new WP_Query($args);
+
+        // Check if there's a product in the category
+        if ($pet_portraits_product->have_posts()) {
+            $pet_portraits_product->the_post();
+            $product_permalink = esc_url(get_permalink());
+        } else {
+            // If no product found, link to the category archive
+            $product_permalink = $category_link;
+        }
+    } else {
+        // For other categories, link to their respective category archives
+        $product_permalink = $category_link;
+    }
+
+    echo '<a href="' . $product_permalink . '">';
     echo '<h2>' . esc_html($category->name) . '</h2>';
 
     // Display category image
