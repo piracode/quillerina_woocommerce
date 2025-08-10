@@ -8,6 +8,7 @@
 defined('ABSPATH') || exit;
 
 get_header('shop');
+echo '<h1>Our Earrings Collection</h1>';
 echo '<section class="category-products-section">';
 if (have_posts()) {
     while (have_posts()) {
@@ -16,7 +17,6 @@ if (have_posts()) {
 
         // Wrap the eqch product in an anchor tag and an article tag
         echo '<article class="product-container">';
-        echo '<h1>HELLO</h1>';
         echo '<a href="' . esc_url($product->get_permalink()) . '">';
 
         // Display product title

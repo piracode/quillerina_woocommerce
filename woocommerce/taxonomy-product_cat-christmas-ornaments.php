@@ -8,6 +8,7 @@
 defined('ABSPATH') || exit;
 
 get_header('shop');
+echo '<h1>Our Ornaments Collection</h1>';
 echo '<section class="category-products-section">';
 if (have_posts()) {
     while (have_posts()) {

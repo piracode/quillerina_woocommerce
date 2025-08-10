@@ -272,3 +272,63 @@ add_image_size('custom-thumbnail', 200, 200, false);
 if (has_post_thumbnail()) {
 	the_post_thumbnail('custom-thumbnail');
 }
+
+
+// // Adjust product price based on quantity for the "Christmas Ornaments" category
+// function custom_christmas_ornaments_price($price, $product)
+// {
+
+// 	error_log('Custom function is being called.');
+
+// 	// Check if the product is in the "Christmas Ornaments" category
+// 	if (has_term('christmas-ornaments', 'product_cat', $product->get_id())) {
+// 		$quantity = WC()->cart->get_cart_item_quantities();
+
+// 		if (array_sum($quantity) >= 3) {
+// 			return 10;  // Price for 3 or more items
+// 		} elseif (array_sum($quantity) === 2) {
+// 			return 25;  // Price for 2 items
+// 		} else {
+// 			return 14;  // Default price for 1 item
+// 		}
+// 	}
+
+// 	return $price;  // Return original price for other products
+// }
+// add_filter('woocommerce_product_get_price', 'custom_christmas_ornaments_price', 10, 2);
+// add_filter('woocommerce_product_variation_get_price', 'custom_christmas_ornaments_price', 10, 2);
+
+
+function custom_christmas_ornaments_price($price, $product)
+{
+	error_log('Custom function is being called.');
+	echo '<h1>Custom function is being called.</h1>';
+	return $price;  // Return original price for other products
+}
+
+
+
+
+
+
+
+
+
+
+// // Adjust shipping cost based on quantity for the "Christmas Ornaments" category
+// function custom_christmas_ornaments_shipping( $rates, $package ) {
+//     $quantity = WC()->cart->get_cart_item_quantities();
+
+//     if ( array_sum( $quantity ) > 3 ) {
+//         // Adjust shipping cost for more than 3 items
+//         foreach ( $rates as $rate_key => $rate ) {
+//             if ( 'flat_rate:1' === $rate->id ) {  // Adjust the shipping method ID accordingly
+//                 $rates[ $rate_key ]->cost = 5;  // Change to the appropriate shipping cost
+//                 break;  // Stop loop since we found and adjusted the desired shipping method
+//             }
+//         }
+//     }
+
+//     return $rates;
+// }
+// add_filter( 'woocommerce_package_rates', 'custom_christmas_ornaments_shipping', 10, 2 );
